@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="./cart.css">
+<meta charset="utf-8">
+</head>
+<body>
+    <div class="triangle3"></div>
+    <div class="triangle4"></div>
+	<img src="./cart-bg1.png" class="bg1">
+	<div class="header">
+		<span class="text1">خانه</span>
+		<span class="text2">فروشگاه</span>
+		<span class="text3">اورژانس</span>
+		<span class="text4">صفحه شما</span>
+	</div>
+<div style="text-align:center" class="dots">
+  <span class="dot dot1" onclick="currentSlide(1)">
+  </span> 
+  <span class="line1 line"></span>
+  <span class="dot dot2" onclick="currentSlide(2)"></span>
+  <span class="line2 line"></span> 
+  <span class="dot dot4" onclick="currentSlide(3)"></span> 
+</div>
+<div class="textdot1">سفارشات</div>
+<div class="textdot2-firsthalf">تایید آدرس</div>
+<div class="textdot2-secondhalf">مکانیک</div>
+<div class="textdot3">پایان</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+ <div class="cart1"></div>
+ <div class="cart2"></div>
+<div class="cart3"></div>
+<div class="cart4"></div>
+<div class="sum1">جمع کل</div>
+<div class="sum2">46/000</div>
+<div class="T3">ت</div>
+<div class="addcart">اضافه به سبد خرید </div>
+<div class="mall">فروشگاه</div>
+ <div class="circle1"></div>
+ <div class="circle2"></div>
+ <div class="circle3"></div>
+ <div class="plus">+</div>
+ <img src="./lent2.jpg" class="image2">
+ <img src="./3.PNG" class="image3">
+ <img src="./cart-bg2.PNG" class="image4">
+ <div class="name1">لنت لیزر طلایی هوندا</div>
+ <div class="name2">روغن موتور بهران سوپر پیشتاز</div>
+
+ <input class="numberq1" value =1 id="numberq1">
+ <div class="price1">28/000</div>
+ <div class="price2">18/000</div>
+ <div class="T1">ت</div>
+ <div class="T2">ت</div>
+ <div class="title1">نام</div>
+ <div class="title2">تعداد</div>
+ <div class="title3">قیمت</div>
+ <input class="numberq2" value =1 id="numberq2" onchange="f4()">
+ <div class="triangle2"  onclick="f6()">
+     <div class="item2 etem2" onclick="f5(1)">1</div>
+     <div class="item2 etem3" onclick="f5(2)">2</div>
+     <div class="item2 etem4" onclick="f5(3)">3</div>
+     <div class="item2 etem5" onclick="f5(4)">4</div>
+     <div class="item2 etem6" onclick="f5(5)">5</div>
+     <div class="item2 etem7" onclick="f5(6)">6</div>
+     <div class="item2 etem8" onclick="f5(7)">7</div>
+     <div class="item2 etem9" onclick="f5(8)">8</div>
+     <div class="item2 etem10" onclick="f5(9)">9</div>
+     <div class="item2 etem11" onclick="f5(10)">10</div>
+   </div>
+  <div class="triangle1"  onclick="f1()">   
+    <div class="allnumbers1"></div>
+      <div class="item1 etem1" onclick="f2(1)">1</div>
+      <div class="item1 etem2" onclick="f2(2)">2</div>
+      <div class="item1 etem3" onclick="f2(3)">3</div>
+      <div class="item1 etem4" onclick="f2(4)">4</div>
+      <div class="item1 etem5" onclick="f2(5)">5</div>
+      <div class="item1 etem6" onclick="f2(6)">6</div>
+      <div class="item1 etem7" onclick="f2(7)">7</div>
+      <div class="item1 etem8" onclick="f2(8)">8</div>
+      <div class="item1 etem9" onclick="f2(9)">9</div>
+      <div class="item1 etem10" onclick="f2(10)">10</div>
+    </div>
+
+</div>
+<div class="mySlides fade">
+  <img src="2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="3.jpg" style="width:100%">
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">مرحله قبل</a>
+<a class="next" onclick="plusSlides(1)">تایید و ادامه</a>
+
+
+</div>
+
+<br>
+
+
+
+<script>
+var slideIndex =1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var j;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  var lines = document.getElementsByClassName("line");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+
+
+  if( slides[1].style.display === "block" )
+{
+	dots[1].style.borderBottomColor = "#717171";
+	dots[1].style.borderRightColor = "#717171";
+  lines[0].style.backgroundColor = "#717171";
+  dots[1].style.borderTopColor = "#bbb";
+  dots[2].style.backgroundColor ="#bbb";
+	dots[1].style.borderLeftColor = "#bbb";
+  lines[1].style.backgroundColor ="#bbb";
+}
+else if (slides[0].style.display === "block")
+{
+	lines[1].style.backgroundColor ="#bbb";
+  lines[0].style.backgroundColor ="#bbb";
+	dots[1].style.borderTopColor = "#bbb";
+	dots[1].style.borderLeftColor = "#bbb";
+  dots[1].style.borderRightColor = "#bbb";
+  dots[1].style.borderBottomColor = "#bbb";
+	dots[2].style.backgroundColor ="#bbb";
+}
+else if (slides[2].style.display === "block")
+{
+  lines[1].style.backgroundColor = "#717171";
+  lines[0].style.backgroundColor = "#717171";
+  dots[2].style.backgroundColor = "#717171";
+  dots[1].style.borderTopColor = "#717171";
+  dots[1].style.borderLeftColor = "#717171";
+  dots[1].style.borderBottomColor = "#717171";
+  dots[1].style.borderRightColor = "#717171";
+}
+
+}
+
+</script>
+<script>
+  var a = document.getElementsByClassName('item1')
+  var i
+  function f1()
+  {
+   for ( i = 0 ; i < a.length ; i++ )
+   {
+   if(a[i].style.display==="block")
+   {
+      a[i].style.display = 'none';
+   }  
+   else{
+   a[i].style.display = "block"; 
+   }
+   
+  }
+  
+  }
+  var c = document.getElementById("numberq1")
+  
+  function f2(b)
+  {
+    c.value = b
+  }
+</script>
+<script>
+  var a2 = document.getElementsByClassName('item2')
+  var i2
+  function f6()
+  {
+   for ( i2 = 0 ; i2 < a2.length ; i2++ )
+   {
+   if(a2[i2].style.display==="block")
+   {
+      a2[i2].style.display = 'none';
+   }  
+   else{
+   a2[i2].style.display = "block"; 
+   }
+   
+  }
+  
+  }
+  var c2 = document.getElementById("numberq2")
+  
+  function f5(b2)
+  {
+    c2.value = b2
+  }
+
+</script>
+</body>
+</html> 

@@ -1,0 +1,980 @@
+@font-face 
+{
+  font-family: BMitra;
+  src:url('./BMitra.Woff') format('woff');
+}
+@font-face
+{
+  font-family:BMorvarid;
+  src:url('./BMorvarid.Woff') format('woff'); 
+}
+@font-face
+{
+  font-family:BBardiya;
+  src:url('./BBardiya.Woff') format('woff');  
+}
+@font-face
+{
+  font-family:BNasimBold;
+  src:url('./BNasimBold.Woff') format('woff');  
+}
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+position: absolute;
+margin-top: 7vw;
+width: 100%;
+height: 102.8vw;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding:2vw;
+
+  margin-top: -2vw;
+  color: white;
+  font-size: 3vw;
+  transition: 0.6s ease;
+  border-radius: 0 0.5vw 0.5vw 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  border-radius: 0.5vw;
+  margin-top: 36vw;
+  font-size: 2vw;
+  background-color: #1a2930;
+  font-family: BBardiya;
+  width: 15vw;
+  text-align: center;
+  cursor: pointer;
+  right: 49vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+.prev
+{
+  border-radius: 0.5vw;
+  margin-top: 36vw;
+  font-size: 2vw;
+  background-color: #1a2930;
+  font-family: BBardiya;
+  width: 15vw;
+  text-align: center;
+  cursor: pointer;
+  right: 29vw;
+  padding: 1vw 1vw 1vw 1vw;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height:3vw;
+  width:3vw;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+div.dots
+{
+margin-left: -26vw;
+}
+span.dot2 {
+height: 2.3vw;
+position: absolute;
+border-radius: 50px;
+border-right-color: #717171;
+border-bottom-color: #717171;
+border-width: 1.6vw;
+border-style: solid;
+transform: rotate(-45deg);
+margin-top: 13.8vw;
+margin-left: -1vw;
+    }
+    span.dot1 {
+position: absolute;
+margin-left: 24vw;
+margin-top: 14vw;
+
+background-color: #717171;
+    }
+    span.dot4 {
+margin-left: -26vw;
+
+margin-top: 14vw;
+    }
+    span.line1
+    {
+height: 1.5vw;
+
+width: 23vw;
+
+position: absolute;
+
+margin-top: 14.7vw;
+
+border-radius: 12%;
+
+margin-left: 1.6vw;
+
+z-index: -1;
+    }
+    span.line2
+    {
+height: 1.5vw;
+
+width: 23vw;
+
+background-color: #717171;
+
+position: absolute;
+
+margin-top: 14.7vw;
+
+border-radius: 12%;
+
+margin-left: -23.4vw;
+
+z-index: -1;
+    }
+    img.bg1
+    {
+      position: absolute;
+z-index: -1;
+width: 100%;
+height: 123vw;
+    }
+    div.header
+    {
+      width: 100%;
+
+height: 6vw;
+
+position: fixed;
+
+background-color: #1a2930;
+
+z-index: 1;
+    }
+    span.text1
+    {
+
+color: #d8b53b;
+
+margin-top: 0vw;
+
+position: absolute;
+font-family: BBardiya;
+
+font-size: 2.1vw;
+margin-left: 87.22vw;
+padding: 1.13vw;
+background-color:#1a2930;
+
+padding-right: 5.26vw;
+
+padding-left: 5vw;
+    }
+    span.text2
+    {
+font-size: 2.1vw;
+
+color: #d8b53b;
+
+margin-top: 0vw;
+
+position: absolute;
+
+margin-left: 71.65vw;
+
+font-family: BBardiya;
+
+padding: 1.13vw;
+
+    padding-right: 1.1vw;
+    padding-left: 1.1vw;
+
+padding-right: 1.09vw;
+
+padding-left: 1.09vw;
+
+background-color:#1a2930;
+
+padding-right: 5.1vw;
+
+padding-left: 5vw;
+    }
+span.text3
+{
+font-size: 2.1vw;
+
+color: #d8b53b;
+
+margin-top: 0vw;
+
+position: absolute;
+
+margin-left: 56.59vw;
+
+font-family: BBardiya;
+
+padding: 1.13vw;
+
+    padding-right: 1.1vw;
+    padding-left: 1.1vw;
+
+padding-right: 1.09vw;
+
+padding-left: 1.09vw;
+
+padding-right: 0.67vw;
+
+padding-left: 0.67vw;
+
+background-color:#1a2930;
+
+padding-right: 5.1vw;
+
+padding-left: 5vw;
+}
+span.text4
+{
+  font-size: 2.1vw;
+
+color: #d8b53b;
+
+margin-top: 0vw;
+
+position: absolute;
+
+margin-left: 39.6vw;
+
+font-family: BBardiya;
+
+padding: 1.13vw;
+
+    padding-right: 1.1vw;
+    padding-left: 1.1vw;
+
+padding-right: 1.1vw;
+
+padding-left: 1.1vw;
+
+background-color:#1a2930;
+
+padding-right: 5.15vw;
+
+padding-left: 5vw;
+}
+span.text1:hover 
+{
+  cursor: pointer;
+  background-color: #f7ce3e;
+  color :#1a2930;
+  transition: 0.6s ease-in-out all ;
+}
+span.text2:hover 
+{
+  cursor: pointer;
+  background-color: #f7ce3e;
+  color :#1a2930;
+  transition: 0.6s ease-in-out all ;
+}
+span.text3:hover 
+{
+  cursor: pointer;
+  background-color: #f7ce3e;
+  color :#1a2930;
+  transition: 0.6s ease-in-out all ;
+}
+span.text4:hover 
+{
+  cursor: pointer;
+  background-color: #f7ce3e;
+  color :#1a2930;
+  transition: 0.6s ease-in-out all ;
+}
+div.cart1
+{
+  width: 80vw;
+  height: 8vw;
+  background-color: white;
+  position: absolute;
+  margin-left: 6vw;
+  margin-top: 17vw;
+  z-index: -1;
+  border-radius: 0.5vw;
+}
+div.circle1
+{
+  border-radius: 50%;
+
+  position: absolute;
+  
+  height: 14vw;
+  
+  width: 14vw;
+  
+  background-color: white;
+  
+  margin-left: 81vw;
+  
+  z-index: 0;
+  
+  margin-top: 14vw;
+}
+img.image2
+{
+  width: 9vw;
+
+  margin-top: 17vw;
+  
+  margin-left: 83.5vw;
+  
+  z-index: 0;
+  
+  position: absolute;
+}
+div.name1
+{
+  font-family: BBArdiya;
+
+  margin-top: 19vw;
+  
+  position: absolute;
+  
+  margin-left: 61vw;
+  
+  font-size: 2.2vw;
+}
+div.textdot1
+{
+  position: absolute;
+font-family: BBardiya;
+font-size: 2.5vw;
+margin-left: 70vw;
+margin-top: 0.5vw;
+}
+div.textdot2-firsthalf
+{
+  font-family: BBardiya;
+position: absolute;
+font-size: 2.5vw;
+margin-left: 50vw;
+margin-top: 0.5vw;
+}
+div.textdot2-secondhalf
+{
+  font-family: BBardiya;
+  position: absolute;
+  font-size: 2.5vw;
+  margin-left: 41vw;
+  margin-top: 0.5vw;
+}
+div.textdot3
+{
+  font-family: BBardiya;
+  position: absolute;
+  font-size: 2.5vw;
+  margin-left: 22vw;
+  margin-top: 0.1vw;
+}
+.triangle1 {
+  width: 0;
+  height: 0;
+  border-left: 1.6vw solid transparent;
+  border-right: 1.6vw solid transparent;
+  border-top: 3.3vw solid #555;
+  cursor: pointer;
+  position: absolute;
+  margin-top:-20.5vw;
+  margin-left: 41.2vw;
+}
+.numberq1
+{
+  width: 11vw;
+  margin-left: 41vw;
+  border: none;
+  background-color: #ccc;
+  text-align: right;
+  height: 4vw;
+  padding-right: 1vw;
+  font-size: 4vw;
+  font-family: BBardiya;
+  margin-top: 19vw;
+  z-index: 6;
+}
+.item1
+{
+  width: 11vw;
+
+  border-bottom: 0.1vw solid white;
+  
+  text-align: center;
+  
+  line-height: 2vw;
+  
+  font-size: 2.5vw;
+  
+  cursor: pointer;
+  
+  margin-left: -1.8vw;
+  
+  font-family: BBardiya;
+  
+  background-color: darkgray;
+  
+  display: none;
+}
+div.etem1:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem2:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem3:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem4:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem5:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem6:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem7:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem8:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem9:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem10:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem1,div.etem2,div.etem3,div.etem4,div.etem5,div.etem6,div.etem7,div.etem8,div.etem9,div.etem10
+{
+  padding-top: 0.3vw;
+  padding-bottom: 0.3vw;
+}
+div.etem1
+{
+  border-top: 0.1vw solid white;
+}
+.price1
+{
+  font-family: BBardiya;
+
+  font-size: 3.6vw;
+  
+  margin-top: -5vw;
+  
+  margin-left: 22vw;
+  
+  letter-spacing: 0.2vw;
+  
+  position: absolute;
+}
+.price2
+{
+  font-family: BBardiya;
+
+  font-size: 3.6vw;
+  
+  margin-top: 11.6vw;
+  
+  margin-left: 22vw;
+  
+  letter-spacing: 0.2vw;
+  
+  position: absolute;
+}
+.T1
+{
+  font-size: 5vw;
+font-family: BMitra;
+margin-top: 11.1vw;
+margin-left: 12.5vw;
+position: absolute;
+}
+.T2
+{
+  font-size: 5vw;
+font-family: BMitra;
+margin-top: -5.6vw;
+margin-left: 12.5vw;
+position: absolute;
+}
+.circle2
+{
+  border-radius: 50%;
+
+  position: absolute;
+  
+  height: 14vw;
+  
+  width: 14vw;
+  
+  background-color: white;
+  
+  margin-left: 81vw;
+  
+  z-index: 0;
+  
+  margin-top: 31vw;
+}
+.circle3
+{
+  border-radius: 50%;
+  position: absolute;
+  height: 14vw;
+  width: 14vw;
+  background-color: white;
+  margin-left: 81vw;
+  z-index: 0;
+  margin-top: 48vw;
+  border: 1vw solid black;
+  cursor: pointer;
+}
+.plus
+{
+  cursor: pointer;
+  position: absolute;
+
+font-size: 13vw;
+
+margin-top: 46vw;
+
+margin-left: 82.7vw;
+}
+img.image3
+{
+  width: 9vw;
+
+  margin-top: 33vw;
+  
+  margin-left: 83.7vw;
+  
+  z-index: 0;
+  
+  position: absolute;
+  
+  height: 10.5vw;
+}
+.cart2
+{
+  width: 80vw;
+
+  height: 8vw;
+  
+  background-color: white;
+  
+  position: absolute;
+  
+  margin-left: 6vw;
+  
+  margin-top: 34vw;
+  
+  z-index: -1;
+  
+  border-radius: 0.5vw;
+}
+.cart3
+{
+  width: 80vw;
+
+  height: 8vw;
+  
+  background-color: white;
+  
+  position: absolute;
+  
+  margin-left: 6vw;
+  
+  margin-top: 51.5vw;
+  
+  z-index: -1;
+  
+  border-radius: 0.5vw;
+}
+.title1
+{
+  position: absolute;
+
+font-size: 3vw;
+
+font-family: BBardiya;
+
+margin-top: -13vw;
+
+margin-left: 66vw;
+}
+.title2
+{
+  position: absolute;
+
+  font-size: 3vw;
+  
+  font-family: BBardiya;
+  
+  margin-top: -13vw;
+  
+  margin-left: 44vw;
+}
+.title3
+{
+  font-size: 3vw;
+
+position: absolute;
+
+font-family: BBardiya;
+
+margin-top: -13vw;
+
+margin-left: 23.5vw;
+}
+.name2
+{
+  font-family: BBardiya;
+
+  position: absolute;
+  
+  font-size: 2.2vw;
+  
+  margin-top: 35.8vw;
+  
+  margin-left: 58vw;
+}
+.allnumbers1
+{
+  margin-top: 0.28vw;
+}
+.triangle2 {
+  width: 0;
+  height: 0;
+  border-left: 1.6vw solid transparent;
+  border-right: 1.6vw solid transparent;
+  border-top: 3.3vw solid #555;
+  cursor: pointer;
+  position: absolute;
+  margin-top: -3.5vw;
+  margin-left: 41.2vw;
+}
+.numberq2
+{
+  width: 11vw;
+  margin-left: 41vw;
+  border: none;
+  background-color: #ccc;
+  text-align: right;
+  height: 4vw;
+  padding-right: 1vw;
+  font-size: 4vw;
+  font-family: BBardiya;
+  margin-top: 13vw;
+  z-index: 6;
+}
+.item2
+{
+  width: 11vw;
+
+  border-bottom: 0.1vw solid white;
+  
+  text-align: center;
+  
+  line-height: 2vw;
+  
+  font-size: 2.5vw;
+  
+  cursor: pointer;
+  
+  margin-left: -1.8vw;
+  
+  font-family: BBardiya;
+  
+  background-color: darkgray;
+  
+  display: none;
+}
+div.etem2:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem3:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem4:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem5:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem6:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem7:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem8:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem9:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem10:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+div.etem11:hover 
+{
+  background-color:black;
+  color: white;
+  
+}
+.addcart
+{
+  position: absolute;
+
+font-size: 2.6vw;
+
+font-family: BBardiya;
+
+margin-top: 53vw;
+
+margin-left: 60.5vw;
+}
+.mall
+{
+  position: absolute;
+
+font-family: BBardiya;
+
+font-size: 2.6vw;
+
+margin-top: 53.3vw;
+
+margin-left: 39vw;
+
+background-color: #1a2930;
+
+width: 15vw;
+
+color: white;
+
+text-align: center;
+
+border-radius: 0.5vw;
+}
+.cart4
+{
+  width: 88vw;
+
+  height: 8vw;
+  
+  background-color: white;
+  
+  position: absolute;
+  
+  margin-left: 6vw;
+  
+  margin-top: 69.5vw;
+  
+  z-index: -1;
+  
+  border-radius: 0.5vw;
+}
+.sum1
+{
+  position: absolute;
+
+  margin-top: 70.5vw;
+  
+  font-size: 3vw;
+  
+  font-family: BBardiya;
+  
+  margin-left: 65vw;
+}
+.sum2
+{
+  font-size: 3.6vw;
+
+  position: absolute;
+  
+  margin-top: 70.5vw;
+  
+  font-family: BBardiya;
+  
+  margin-left: 21vw;
+  
+  letter-spacing: 0.2vw;
+}
+.T3
+{
+  font-size: 5vw;
+
+  font-family: BMitra;
+  
+  margin-top: 69.6vw;
+  
+  margin-left: 12.5vw;
+  
+  position: absolute;
+}
+.image4
+{
+  position: absolute;
+
+width: 100%;
+
+margin-top: 77.4vw;
+}
+.triangle3
+{  
+  width: 0;
+
+  height: 0;
+  
+  border-left: 2.6vw solid transparent;
+  
+  border-right: 2.6vw solid transparent;
+  
+  border-top: 3.3vw solid white;
+  
+  cursor: pointer;
+  
+  position: absolute;
+  
+  margin-top: 112.8vw;
+  
+  margin-left: 30.5vw;
+  
+  z-index: 1;
+  
+  transform: rotate(90deg);
+
+}
+.triangle4
+{  
+  width: 0;
+
+  height: 0;
+  
+  border-left: 2.6vw solid transparent;
+  
+  border-right: 2.6vw solid transparent;
+  
+  border-top: 3.3vw solid white;
+  
+  cursor: pointer;
+  
+  position: absolute;
+  
+  margin-top: 112.8vw;
+  
+  margin-left: 68.5vw;
+  
+  z-index: 1;
+  
+  transform: rotate(270deg);
+
+}
